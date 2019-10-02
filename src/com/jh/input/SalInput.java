@@ -2,6 +2,8 @@ package com.jh.input;
 
 import java.util.Scanner;
 
+import com.jh.salgrade.SalgradeDTO;
+
 public class SalInput {
 	private Scanner sc;
 	private int grade;
@@ -17,21 +19,21 @@ public class SalInput {
 
 	// 등급 급여 입력하기
 
-	public SalDTO insert() {
+	public SalgradeDTO insert() {
 
-		SalDTO salDTO = new SalDTO();
+		SalgradeDTO salgradeDTO = new SalgradeDTO();
 
 		System.out.println("등급을 입력하세요");
 		int g = sc.nextInt();						
-		salDTO.setGrade(grade);
+		salgradeDTO.setGrade(grade);
 		System.out.println("최소급여를 입력하세요");
 		int l = sc.nextInt();
-		salDTO.setLosal(losal);
+		salgradeDTO.setLosal(losal);
 		System.out.println("최대급여를 입력하세요");
 		int h = sc.nextInt();
-		salDTO.setHisal(hisal);
+		salgradeDTO.setHisal(hisal);
 
-		return salDTO;
+		return salgradeDTO;
 
 	}
 

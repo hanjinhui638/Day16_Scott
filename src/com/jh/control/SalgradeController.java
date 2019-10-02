@@ -51,20 +51,20 @@ public class SalgradeController {
 			
 			case 2: 
 				select = salInput.gradeinput();
-				SalgradeDTO salgradeDTO = salgradeDAO.getSelecton(select);
+				SalgradeDTO salgradeDTO = salDAO.getSalgradeOne(select);
 				if(salgradeDTO !=null) {
 					salView.view(salgradeDTO);
 				}else {
 					salView.view("없는 사원 번호입니다.");
 				}
 			case 3:
-				
-				
+				SalgradeDTO salgradeDTO2 = salInput.insert();
+				select = salDAO.salInsert(salgradeDTO2);
 				String s = "Insert Fail";
 				if(select>0) {
 					s = "Insert Success";
 				}
-				
+				salView.view(s);
 				break;
 				
 			case 4:
