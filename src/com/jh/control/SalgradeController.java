@@ -10,10 +10,14 @@ public class SalgradeController {
 	
 	private Scanner sc;
 	private SalgradeDAO salDAO;
+	private Salview salView;
+	private SalInput salinput;
 
 	public SalgradeController() {
 		sc = new Scanner(System.in);
 		salDAO = new SalgradeDAO();
+		salview = new SalView();
+		salInput = new SalInput();
 	}
 	
 	public void start() {
@@ -35,14 +39,22 @@ public class SalgradeController {
 				ArrayList<SalgradeDTO> ar = salDAO.getSalectList();
 				if(ar.size()>0) {
 					
-				}else {
+					salView.view(ar);
 					
+				}else {
+					salView.view("데이터가 없습니다.");
 				}
 				
 				break;
 			
 			case 2: 
-			
+				select = salInput.salInput();
+				SalgradeDTO salgradeDTO = salgradeDAO.getSelecton(select);
+				if(salgradeDTO !=null) {
+					salView.view(salgradeDTO);
+				}else {
+					salView.view("없는 사원 번호입니다.");
+				}
 			case 3:
 				
 				

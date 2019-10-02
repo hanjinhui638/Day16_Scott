@@ -1,6 +1,6 @@
 package com.jh.view;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.jh.bonus.BonusDTO;
 
@@ -19,9 +19,8 @@ public class BonusView {
 		
 	}
 	
-	public void view(ArrayList<BonusDTO> ar) {
+	public void view(List<BonusDTO> ar) {
 		for(BonusDTO bonusDTO:ar) {
-			
 			this.view(bonusDTO);
 		}
 	}
