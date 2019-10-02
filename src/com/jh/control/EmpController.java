@@ -87,7 +87,7 @@ public class EmpController {
 				select = empInput.empnoInput();
 				EmpDTO empDTO3 = empDAO.getSelectOne(select);
 				if(empDTO !=null) {
-					empDAO.delete(empno);
+					empDAO.delete();
 				}else {
 					empView.view("없는 사원 번호입니다.");
 				}

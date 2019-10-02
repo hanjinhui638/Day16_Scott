@@ -91,8 +91,8 @@ public class SalgradeDAO {
 			while(rs.next()) {
 				SalgradeDTO salgradeDTO = new SalgradeDTO();
 				salgradeDTO.setGrade(rs.getInt("grade"));
-				salgradeDTO.setHisal(rs.getInt("losal"));
-				salgradeDTO.setLosal(rs.getInt("hisal"));
+				salgradeDTO.setLosal(rs.getInt("losal"));
+				salgradeDTO.setHisal(rs.getInt("hisal"));
 
 				ar.add(salgradeDTO);
 			}
