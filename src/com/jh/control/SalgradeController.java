@@ -3,20 +3,22 @@ package com.jh.control;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.jh.input.SalInput;
 import com.jh.salgrade.SalgradeDAO;
 import com.jh.salgrade.SalgradeDTO;
+import com.jh.view.Salview;
 
 public class SalgradeController {
 	
 	private Scanner sc;
 	private SalgradeDAO salDAO;
 	private Salview salView;
-	private SalInput salinput;
+	private SalInput salInput;
 
 	public SalgradeController() {
 		sc = new Scanner(System.in);
 		salDAO = new SalgradeDAO();
-		salview = new SalView();
+		salView = new Salview();
 		salInput = new SalInput();
 	}
 	
@@ -48,7 +50,7 @@ public class SalgradeController {
 				break;
 			
 			case 2: 
-				select = salInput.salInput();
+				select = salInput.gradeinput();
 				SalgradeDTO salgradeDTO = salgradeDAO.getSelecton(select);
 				if(salgradeDTO !=null) {
 					salView.view(salgradeDTO);
