@@ -14,6 +14,7 @@ public class SalgradeController {
 	private SalgradeDAO salDAO;
 	private Salview salView;
 	private SalInput salInput;
+	private int grade;
 
 	public SalgradeController() {
 		sc = new Scanner(System.in);
@@ -68,6 +69,13 @@ public class SalgradeController {
 				break;
 				
 			case 4:
+				select = salDAO.saldelete(grade);
+				if(select>0) {
+					
+				}else {
+					salView.view("없는 등급입니다.");
+				}
+				
 				
 			default :
 				check= !check;
