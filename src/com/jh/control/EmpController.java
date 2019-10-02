@@ -44,6 +44,7 @@ public class EmpController {
 			System.out.println("2. 사원검색출력");
 			System.out.println("3. 사원정보입력");
 			System.out.println("4. 사원정보삭제");
+			System.out.println("5. 사원이름검색");
 			System.out.println("3. 종료");
 			
 			select = sc.nextInt();

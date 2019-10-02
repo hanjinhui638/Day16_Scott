@@ -61,6 +61,7 @@ public class SalgradeController {
 			case 3:
 				SalgradeDTO salgradeDTO2 = salInput.insert();
 				select = salDAO.salInsert(salgradeDTO2);
+				
 				String s = "Insert Fail";
 				if(select>0) {
 					s = "Insert Success";
@@ -71,7 +72,7 @@ public class SalgradeController {
 			case 4:
 				select = salDAO.saldelete(grade);
 				if(select>0) {
-					
+					salView.view("삭제하였습니다.");
 				}else {
 					salView.view("없는 등급입니다.");
 				}
