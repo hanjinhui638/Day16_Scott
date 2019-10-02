@@ -7,7 +7,31 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import com.jh.util.DBConnector;
 
+import oracle.jdbc.proxy.annotation.Pre;
+
 public class EmpDAO {
+	//%A% 
+	//select*from emp
+	//where ename like ?
+	//st.setString(1, %A%)
+	
+	
+	public EmpDTO getSelectOne(String ename) {
+		Connection con = null;
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		
+		try {
+			con = DBConnector.getConnect();
+			String sql = "select* from emp where ename like ? ";
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	
+	}
 	
 	public int delete(int empno) {
 		Connection con = null;

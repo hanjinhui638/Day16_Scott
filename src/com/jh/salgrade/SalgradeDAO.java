@@ -48,7 +48,7 @@ public class SalgradeDAO {
 
 		try {
 			con = DBConnector.getConnect();
-			String sql = "insert into sagrade (grade, losal, hisal) "
+			String sql = "insert into salgrade (grade, losal, hisal) "
 					+ "+values (?,?,?)";
 			st= con.prepareStatement(sql);
 			st.setInt(1, salgradeDTO.getGrade());
