@@ -16,7 +16,7 @@ public class EmpDAO {
 	//st.setString(1, %A%)
 	
 	
-	public EmpDTO getSelectOne(String ename) {
+	public void getSelectOne(String ename) {	//return 
 		Connection con = null;
 		PreparedStatement st = null;
 		ResultSet rs = null;
